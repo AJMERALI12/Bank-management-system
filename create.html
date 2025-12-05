@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head><title>Create Account</title></head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f8cff, #003b95);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.card h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.card input:focus {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #fff;
+}
+
+.card button {
+    width: 45%;
+    background: #ffffff;
+    color: #003b95;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #003b95;
+    color: white;
+    transform: scale(1.05);
+}
+
+.show {
+    margin-top: 18px;
+    color: #ffeb3b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+<body>
+  
+    <div class="card">
+<h2>Create Account</h2>
+<input id="name" placeholder="Enter Name"><br><br>
+<input id="accnum" type="number" placeholder="Account Number"><br><br>
+<input id="amount" type="number" placeholder="Initial Balance"><br><br>
+
+<button onclick="createAccount()">Create</button>
+<button onclick="location.href='index.html'">Back</button>
+</div>
+<div class="show"></div>
+<script src="script.js"></script>
+</body>
+</html>
